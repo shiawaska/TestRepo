@@ -1,5 +1,5 @@
 ﻿using PlanetaryExplorationLogs.API.Data.Context;
-using PlanetaryExplorationLogs.API.Data.Models;
+using PlanetaryExplorationLogs.API.Data.DTO;
 using PlanetaryExplorationLogs.API.Utility.Patterns;
 using System.Net;
 using static PlanetaryExplorationLogs.API.Utility.Patterns.CommandQuery;
@@ -8,9 +8,9 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Missions.CreateMission
 {
 	public class CreateMission_Command : RequestBase<int>
 	{
-		private readonly Mission _newMission;
+		private readonly MissionFormDto _newMission;
 
-		public CreateMission_Command(PlanetExplorationDbContext context, Mission NewMission)
+		public CreateMission_Command(PlanetExplorationDbContext context, MissionFormDto NewMission)
 			: base(context)
 		{
 			_newMission = NewMission;

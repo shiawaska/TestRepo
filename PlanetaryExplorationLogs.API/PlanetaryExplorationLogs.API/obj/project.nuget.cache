@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Neq5ySimZWo=",
+  "dgSpecHash": "KjhkST0+fJ0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rotor\\source\\repos\\Test repo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+  "projectFilePath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rotor\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Rotor\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

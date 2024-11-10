@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rotor\\source\\repos\\Test repo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {}
+    "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rotor\\source\\repos\\Test repo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {
+    "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rotor\\source\\repos\\Test repo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+        "projectUniqueName": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
         "projectName": "PlanetaryExplorationLogs.API",
-        "projectPath": "C:\\Users\\Rotor\\source\\repos\\Test repo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+        "projectPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
         "packagesPath": "C:\\Users\\Rotor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rotor\\source\\repos\\Test repo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\obj\\",
+        "outputPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rotor\\AppData\\Roaming\\NuGet\\NuGet.Config",
