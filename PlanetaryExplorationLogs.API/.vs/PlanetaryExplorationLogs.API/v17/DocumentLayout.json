@@ -3,60 +3,28 @@
   "WorkspaceRootPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\controllers\\discoverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\controllers\\discoverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\discoveries\\getdiscoveries\\getdiscoveries_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\discoveries\\getdiscoveries\\getdiscoveries_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\missions\\getdiscoveriesbymission\\getdiscoveriesbymission_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\missions\\getdiscoveriesbymission\\getdiscoveriesbymission_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\discoveries\\getdiscoveries\\getdescoveries_query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\discoveries\\getdiscoveries\\getdescoveries_query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\missions\\getdiscoveriesbymission\\getdiscoveriesbymission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\missions\\getdiscoveriesbymission\\getdiscoveriesbymission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\discoveries\\getdiscoveries\\getdiscoveries_validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\discoveries\\getdiscoveries\\getdiscoveries_validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\missions\\getmissions\\getmissions_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\missions\\getmissions\\getmissions_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\missions\\getdiscoveriesbymission\\getdiscoveriesbymission_validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\missions\\getdiscoveriesbymission\\getdiscoveriesbymission_validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\data\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\data\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\requests\\queries\\missions\\getmissions\\getmissions_query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\requests\\queries\\missions\\getmissions\\getmissions_query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\controllers\\discoverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\controllers\\discoverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\data\\dto\\discoveryformdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\data\\dto\\discoveryformdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\data\\dto\\missionformdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\data\\dto\\missionformdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\data\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\data\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|e:\\github\\test repo\\testrepo\\planetaryexplorationlogs.api\\planetaryexplorationlogs.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C0F4F63-8DBA-451A-9DBF-62F4BCE8BA3D}|PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj|solutionrelative:planetaryexplorationlogs.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,46 +34,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "MissionController.cs",
               "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Controllers\\MissionController.cs",
               "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Controllers\\MissionController.cs",
               "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Controllers\\MissionController.cs",
               "RelativeToolTip": "PlanetaryExplorationLogs.API\\Controllers\\MissionController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAcwFcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T22:42:21.448Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DiscoveryController.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GetMissions_Handler.cs",
+              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
+              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
+              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
+              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T15:44:27.792Z",
+              "WhenOpened": "2024-11-10T14:20:39.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Program.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Program.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Program.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "GetMissions_Query.cs",
+              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
+              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
+              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
+              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T23:16:12.385Z",
+              "WhenOpened": "2024-11-10T13:40:13.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mission.cs",
+              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
+              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
+              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
+              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T13:34:45.638Z",
               "EditorCaption": ""
             }
           ]
@@ -117,9 +97,9 @@
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
         "Id": "4441d621-4aad-42c2-9347-67e1e3f2b689",
-        "Display": 1,
-        "X": -5,
-        "Y": 0,
+        "Display": 0,
+        "X": 757,
+        "Y": 207,
         "Width": 970,
         "Height": 1085,
         "WindowState": 0
@@ -127,37 +107,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetMissions_Handler.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Handler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:20:39.893Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetMissions_Query.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetMissions\\GetMissions_Query.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:40:13.278Z",
-              "EditorCaption": ""
             }
           ]
         }
@@ -178,37 +132,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Mission.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Data\\Models\\Mission.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:34:45.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MissionFormDto.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\DTO\\MissionFormDto.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Data\\DTO\\MissionFormDto.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\DTO\\MissionFormDto.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Data\\DTO\\MissionFormDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:34:53.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "DiscoveryFormDto.cs",
               "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Data\\DTO\\DiscoveryFormDto.cs",
               "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Data\\DTO\\DiscoveryFormDto.cs",
@@ -227,95 +155,30 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "6f383572-0143-46cb-8444-7d3957896719",
-        "Display": 0,
-        "X": 453,
-        "Y": -29,
-        "Width": 945,
-        "Height": 1085,
+        "Id": "2fbc3ffd-a289-4d7c-90ef-4117a4eb6d38",
+        "Display": 2,
+        "X": 598,
+        "Y": 240,
+        "Width": 1568,
+        "Height": 793,
         "WindowState": 2
       },
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GetDiscoveriesByMission.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Title": "DiscoveryController.cs",
+              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
+              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
+              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
+              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Controllers\\DiscoveryController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:39:09.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetDiscoveriesByMission_Validator.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Validator.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Validator.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Validator.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Validator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:45:10.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetDiscoveriesByMission_Handler.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Handler.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Handler.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Handler.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Missions\\GetDiscoveriesByMission\\GetDiscoveriesByMission_Handler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:45:24.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetDescoveries_Query.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDescoveries_Query.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDescoveries_Query.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDescoveries_Query.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDescoveries_Query.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:13:21.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetDiscoveries_Handler.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Handler.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Handler.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Handler.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Handler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:19:45.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetDiscoveries_Validator.cs",
-              "DocumentMoniker": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Validator.cs",
-              "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Validator.cs",
-              "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Validator.cs",
-              "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Discoveries\\GetDiscoveries\\GetDiscoveries_Validator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T14:19:49.001Z",
+              "WhenOpened": "2024-11-09T15:44:27.792Z",
               "EditorCaption": ""
             }
           ]

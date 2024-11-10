@@ -44,7 +44,7 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Missions.CreateMission
                     HttpStatusCode.BadRequest,
                     "Mission must have a planet");
             }
-            var PlanetExists = await DbContext.Missions.FindAsync(_newMission.PlanetId);
+            var PlanetExists = await DbContext.Planets.FindAsync(_newMission.PlanetId);
             if (PlanetExists == null)
             {
                 return await InvalidResultAsync(
