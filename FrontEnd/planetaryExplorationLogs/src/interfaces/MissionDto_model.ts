@@ -1,4 +1,4 @@
-export interface MissionDto
+export interface MissionFormDto
 {
   name: string;
   Date: Date;

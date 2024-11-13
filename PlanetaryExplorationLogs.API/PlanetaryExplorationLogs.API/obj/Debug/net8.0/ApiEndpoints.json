@@ -408,6 +408,32 @@
   },
   {
     "ContainingType": "PlanetaryExplorationLogs.API.Controllers.PlanetController",
+    "Method": "GetPlanet",
+    "RelativePath": "api/Planet/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PlanetaryExplorationLogs.API.Utility.Patterns.RequestResult\u00601[[PlanetaryExplorationLogs.API.Data.DTO.PlanetFormDto, PlanetaryExplorationLogs.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PlanetaryExplorationLogs.API.Controllers.PlanetController",
     "Method": "GetPlanetsDropdownList",
     "RelativePath": "api/Planet/dropdown",
     "HttpMethod": "GET",
@@ -417,6 +443,26 @@
     "ReturnTypes": [
       {
         "Type": "PlanetaryExplorationLogs.API.Utility.Patterns.RequestResult\u00601[[System.Collections.Generic.List\u00601[[PlanetaryExplorationLogs.API.Data.DTO.PlanetDropdownDto, PlanetaryExplorationLogs.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PlanetaryExplorationLogs.API.Controllers.PlanetController",
+    "Method": "GetPlanets",
+    "RelativePath": "planets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "PlanetaryExplorationLogs.API.Utility.Patterns.RequestResult\u00601[[System.Collections.Generic.List\u00601[[PlanetaryExplorationLogs.API.Data.DTO.PlanetFormDto, PlanetaryExplorationLogs.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

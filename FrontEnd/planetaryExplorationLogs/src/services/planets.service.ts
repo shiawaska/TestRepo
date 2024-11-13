@@ -41,5 +41,18 @@ constructor(private httpclient: HttpClient) { }
       catchError(this.handleError)
     );
   }
+
+  getPlanets(): Observable<PlanetFormDto[]> {
+    return this.httpclient.get<requestResult<PlanetFormDto[]>>('http://localhost:5125/Planets').pipe(
+      map(response => response.data),
+      catchError(this.handleError)
+    );
+  }
+  getPlanet(id: number): Observable<PlanetFormDto> {
+    return this.httpclient.get<requestResult<PlanetFormDto>>(`http://localhost:5125/api/Planet/${id}`).pipe(
+      map(response => response.data),
+      catchError(this.handleError)
+    );
+  }
 }
 

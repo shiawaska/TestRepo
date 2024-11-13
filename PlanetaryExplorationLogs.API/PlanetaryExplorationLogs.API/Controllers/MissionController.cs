@@ -60,7 +60,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
             return new JsonResult(result, _jsonOptions);
         }
 
-        // PUT: api/mission
+        // PUT: api/mission/{id}
         [HttpPut("{Id}")]
         public async Task<ActionResult<RequestResult<int>>> UpdateMission(int Id, [FromBody] MissionFormDto MissionUpdate)
         {

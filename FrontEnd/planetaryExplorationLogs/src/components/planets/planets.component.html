@@ -16,12 +16,13 @@
             <button type="submit" >Create Planet</button>
         </form>
     </div>
-    <div *ngIf="showHistory">
+    <div *ngIf="!showHistory">
         <div *ngFor="let planet of planets; let i = index">
-            <p>name: <span class="red"> {{ planet.name }} </span></p>
-            <p>Description:<span class="red"> {{ planet.description }}</span></p>
-            <p>Image URL: <span class="red"> {{ planet.imageUrl }} </span></p>
-            <!-- <button (click)="deletePlanet(planet.id)">Remove</button> -->
+            <p>Name: <span > {{ planet.name }} </span></p>
+            <p>Type:<span > {{ planet.type }}</span></p>
+            <p>Climate: <span c> {{ planet.climate }} </span></p>
+            <p>Terrain: <span >{{ planet.terrain }} </span></p>
+            <p>Population: <span > {{ planet.population }} </span></p>            
         </div>
     </div>
 </div>

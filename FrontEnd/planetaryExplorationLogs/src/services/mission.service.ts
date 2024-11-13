@@ -2,6 +2,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { MissionDropDownDto } from '../interfaces/MissionDropDownDto_model';
+import { DiscoveryFormDto } from '../interfaces/DiscoveryFormDto_model';
+import { MissionFormDto } from '../interfaces/MissionDto_model';
 
 
 @Injectable({
@@ -22,5 +24,27 @@ export class MissionService {
       catchError(this.handleError)
     );
   }
-  
+  getDiscoveriesForMission(missionId: number): Observable<DiscoveryFormDto[]> {
+    return this.httpclient.get<DiscoveryFormDto[]>(`http://localhost:5125/api/Mission/${missionId}/discovery`).pipe(
+      catchError(this.handleError)
+    );
+  }
+  deleteMission(id: number): Observable<number> {
+    return this.httpclient.delete<number>(`http://localhost:5125/api/Mission/${id}`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  updateMission(mission: MissionFormDto, id: number): Observable<number> {
+    return this.httpclient.put<number>(`http://localhost:5125/api/Mission/${id}`, mission).pipe(
+      catchError(this.handleError)
+    );
+  }
+  createMission(mission: MissionFormDto): Observable<number> {
+    return this.httpclient.post<number>('http://localhost:5125/api/Mission', mission).pipe(
+      catchError(this.handleError)
+    );
+  }
+  // getmissions uses a dbcontext model not a dto model
+
 }

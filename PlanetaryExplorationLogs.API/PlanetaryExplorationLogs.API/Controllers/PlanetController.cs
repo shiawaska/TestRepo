@@ -5,6 +5,8 @@ using PlanetaryExplorationLogs.API.Data.Models;
 using PlanetaryExplorationLogs.API.Requests.Commands.Planets;
 using PlanetaryExplorationLogs.API.Requests.Commands.Planets.DeletePlanet;
 using PlanetaryExplorationLogs.API.Requests.Commands.Planets.UpdatePlanet;
+using PlanetaryExplorationLogs.API.Requests.Queries.Planets.GetMissions;
+using PlanetaryExplorationLogs.API.Requests.Queries.Planets.GetPlanetById;
 using PlanetaryExplorationLogs.API.Requests.Queries.Planets.GetPlanetsDropdownList;
 using PlanetaryExplorationLogs.API.Utility.Patterns;
 
@@ -50,6 +52,20 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var cmd = new DeletePlanet_Command(_context, id);
             return await cmd.ExecuteAsync();
+        }
+        // api/planet/planets
+        [HttpGet("/planets")]
+        public async Task<ActionResult<RequestResult<List<PlanetFormDto>>>> GetPlanets()
+        {
+            var query = new GetPlanets_Query(_context);
+            return await query.ExecuteAsync();
+        }
+        // api/planet/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<RequestResult<PlanetFormDto>>> GetPlanet(int id)
+        {
+            var query = new GetPlanetById_Query(_context ,id);
+            return await query.ExecuteAsync();
         }
     }
 }

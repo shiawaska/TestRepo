@@ -1,11 +1,33 @@
 <div class="Main">
 <p> Here you will explore our planets and missions.</p>
 
-    <!-- <button (click)="getPlanetsDropdown()">Get Planets</button> -->
-
-    <select>
-        <option *ngFor="let planet of planets" [value]="planet.id">{{planet.name}}</option>
+<button *ngIf="main" (click)="selectorToggle()" (click)="mainToggle()">Planet List</button>
+<div *ngIf="showSelector">
+    <!-- <select  [(value)]="selectedPlanet"]> -->
+        <select name="planets" [(ngModel)]="selectedPlanet">
+        <option *ngFor="let planet of planets" [value]="planet.id" >{{planet.name}}</option>        
     </select>
+<button (click)="getPlanet(selectedPlanet)">Get Planet</button>
+</div>
+<div *ngIf="showPlanet" name="planetinfo">
+    <p>Planet Name: {{planet.name}}</p>
+    <p>Planet Type: {{planet.type}}</p>
+    <p>Planet Climate: {{planet.climate}}</p>
+    <p>Planet Terrain: {{planet.terrain}}</p>
+    <p>Planet Population: {{planet.population}}</p>
+    <button (click)="selectorToggle()" (click)="showPlanetToggle()">Back</button>
+</div>
+<div *ngIf="showPlanetList" name="planetList">
+    <div *ngFor="let planet of planetlist">
+        <p>Planet Name: {{planet.name}}</p>
+        <p>Planet Type: {{planet.type}}</p>
+        <p>Planet Climate: {{planet.climate}}</p>
+        <p>Planet Terrain: {{planet.terrain}}</p>
+        <p>Planet Population: {{planet.population}}</p>
+        
+    </div>
+    <button  (click)="mainToggle()">Back</button>
 
+</div>  
 </div>
 
