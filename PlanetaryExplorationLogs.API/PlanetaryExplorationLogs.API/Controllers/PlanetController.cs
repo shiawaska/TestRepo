@@ -37,10 +37,10 @@ namespace PlanetaryExplorationLogs.API.Controllers
         }
 
         // PUT: api/planet
-        [HttpPut]
-        public async Task<ActionResult<RequestResult<int>>> UpdatePlanet([FromBody] Planet planet)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<RequestResult<int>>> UpdatePlanet([FromBody] PlanetFormDto planet, int id)
         {
-            var cmd = new UpdatePlanet_Command(_context, planet);
+            var cmd = new UpdatePlanet_Command(_context, planet, id);
             return await cmd.ExecuteAsync();
         }
 

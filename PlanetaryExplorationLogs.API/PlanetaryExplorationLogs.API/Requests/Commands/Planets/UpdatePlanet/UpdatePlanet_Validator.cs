@@ -1,4 +1,5 @@
 ﻿using PlanetaryExplorationLogs.API.Data.Context;
+using PlanetaryExplorationLogs.API.Data.DTO;
 using PlanetaryExplorationLogs.API.Data.Models;
 using PlanetaryExplorationLogs.API.Utility.Patterns;
 using System.Net;
@@ -8,36 +9,32 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Planets.UpdatePlanet
 {
     public class UpdatePlanet_Validator : ValidatorBase
 	{
-		private readonly Planet _planet;
+		private readonly PlanetFormDto _planet;
+        private readonly int _id;
 
-		public UpdatePlanet_Validator(PlanetExplorationDbContext context, Planet planet)
+        public UpdatePlanet_Validator(PlanetExplorationDbContext context, PlanetFormDto planet, int id)
 			: base(context)
 		{
 			_planet = planet;
-		}
+            _id = id;
+
+        }
 
 		public override async Task<RequestResult> ValidateAsync()
 		{
-			// Obviously, this is dummy validation logic. Replace it with your own.
-			await Task.CompletedTask;
+			
 
-            if(DbContext.Planets.Any(p => p.Id == _planet.Id))
-
-            if (string.IsNullOrEmpty(_planet.Name.Trim()))
+           var dbPlanet = await DbContext.Planets.FindAsync(_id);
+            if (dbPlanet == null)
             {
+                
                 return await InvalidResultAsync(
-                    HttpStatusCode.BadRequest,
-                    "The planet must have a name.");
+                    HttpStatusCode.NotFound,
+                    "Planet not found");
             }
 
-            if (string.IsNullOrEmpty(_planet.Type.Trim()))
-            {
-                return await InvalidResultAsync(
-                    HttpStatusCode.BadRequest,
-                    "The planet must have a type.");
-            }
 
-            // You can also check things in the database, if needed, such as checking if a record exists
+
             return await ValidResultAsync();
 		}
 	}

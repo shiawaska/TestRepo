@@ -1,0 +1,11 @@
+<div class="Main">
+<p> Here you will explore our planets and missions.</p>
+
+    <!-- <button (click)="getPlanetsDropdown()">Get Planets</button> -->
+
+    <select>
+        <option *ngFor="let planet of planets" [value]="planet.id">{{planet.name}}</option>
+    </select>
+
+</div>
+

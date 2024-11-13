@@ -1,4 +1,5 @@
 ﻿using PlanetaryExplorationLogs.API.Data.Context;
+using PlanetaryExplorationLogs.API.Data.DTO;
 using PlanetaryExplorationLogs.API.Data.Models;
 using PlanetaryExplorationLogs.API.Utility.Patterns;
 using System.Net;
@@ -8,19 +9,21 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Planets.UpdatePlanet
 {
     public class UpdatePlanet_Handler : HandlerBase<int>
 	{
-		private readonly Planet _planet;
+		private readonly PlanetFormDto _planet;
+		private readonly int _id;
 
-		public UpdatePlanet_Handler(PlanetExplorationDbContext context, Planet planet)
-			: base(context)
-		{
-			_planet = planet;
-		}
+		public UpdatePlanet_Handler(PlanetExplorationDbContext context, PlanetFormDto planet, int id)
+            : base(context)
+        {
+            _planet = planet;
+            _id = id;
+        }
 
-		public override async Task<RequestResult<int>> HandleAsync()
+         public override async Task<RequestResult<int>> HandleAsync()
 		{
-			var updatedPlanet = await DbContext.Planets.FindAsync(_planet.Id);
+			Planet updatedPlanet = await DbContext.Planets.FindAsync( _id);
 			if (updatedPlanet != null)
-			{
+			{               
 				updatedPlanet.Name = _planet.Name;
                 updatedPlanet.Type = _planet.Type;
                 updatedPlanet.Population = _planet.Population;
@@ -29,12 +32,13 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Planets.UpdatePlanet
                 await DbContext.SaveChangesAsync();
             }
 
+
             // Return the data
             var result = new RequestResult<int>
-			{
-				Data = updatedPlanet?.Id ?? -1,
-				StatusCode = HttpStatusCode.OK
-			};
+            {
+                Data = _id,
+                StatusCode = HttpStatusCode.OK
+            };
 
 			return result;
 		}

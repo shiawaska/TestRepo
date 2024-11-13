@@ -304,6 +304,26 @@
     ]
   },
   {
+    "ContainingType": "PlanetaryExplorationLogs.API.Controllers.MissionController",
+    "Method": "GetMissionDropDownDto",
+    "RelativePath": "api/Mission/dropdown",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "PlanetaryExplorationLogs.API.Utility.Patterns.RequestResult\u00601[[System.Collections.Generic.List\u00601[[PlanetaryExplorationLogs.API.Data.DTO.MissionDropDownDto, PlanetaryExplorationLogs.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "PlanetaryExplorationLogs.API.Controllers.PlanetController",
     "Method": "CreatePlanet",
     "RelativePath": "api/Planet",
@@ -332,14 +352,19 @@
   {
     "ContainingType": "PlanetaryExplorationLogs.API.Controllers.PlanetController",
     "Method": "UpdatePlanet",
-    "RelativePath": "api/Planet",
+    "RelativePath": "api/Planet/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "planet",
-        "Type": "PlanetaryExplorationLogs.API.Data.Models.Planet",
+        "Type": "PlanetaryExplorationLogs.API.Data.DTO.PlanetFormDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

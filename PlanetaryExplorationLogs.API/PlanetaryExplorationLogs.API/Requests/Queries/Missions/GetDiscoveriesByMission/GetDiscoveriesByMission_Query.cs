@@ -7,11 +7,11 @@ namespace PlanetaryExplorationLogs.API.Requests.Queries.Missions.GetDiscoveriesB
 
     
 
-    public class GetDiscoveriesByMission_Command : RequestBase<List<DiscoveryFormDto>>
+    public class GetDiscoveriesByMission_Query : RequestBase<List<DiscoveryFormDto>>
 	{
 		private readonly int _MissionId;
 
-		public GetDiscoveriesByMission_Command(PlanetExplorationDbContext context, int missionId)
+		public GetDiscoveriesByMission_Query(PlanetExplorationDbContext context, int missionId)
 			: base(context)
 		{
 			_MissionId = missionId;

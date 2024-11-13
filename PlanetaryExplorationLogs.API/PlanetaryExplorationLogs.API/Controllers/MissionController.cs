@@ -6,9 +6,11 @@ using PlanetaryExplorationLogs.API.Requests.Commands.Missions.CreateMission;
 using PlanetaryExplorationLogs.API.Requests.Commands.Missions.DeleteMission;
 using PlanetaryExplorationLogs.API.Requests.Commands.Missions.UpdateMission;
 using PlanetaryExplorationLogs.API.Requests.Queries.Missions.GetDiscoveriesByMission;
+using PlanetaryExplorationLogs.API.Requests.Queries.Missions.GetMissionDropdownDto;
 using PlanetaryExplorationLogs.API.Requests.Queries.Missions.GetMissions;
 using PlanetaryExplorationLogs.API.Requests.Queries.Missions.GetMissionsById;
 using PlanetaryExplorationLogs.API.Utility.Patterns;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -19,7 +21,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
     public class MissionController : ControllerBase
     {
         private readonly PlanetExplorationDbContext _context;
-        private readonly JsonSerializerOptions _jsonOptions;
+        private readonly JsonSerializerOptions _jsonOptions; // using to prevent looping
 
         public MissionController(PlanetExplorationDbContext context)
         {
@@ -33,7 +35,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
 
         // GET: api/mission
         [HttpGet]
-        public async Task<ActionResult<RequestResult<List<Mission>>>> GetMissions()
+        public async Task<ActionResult<RequestResult<List<Mission>>>> GetMissions()  // why is this using the model and not the dto? 
         {
             var query = new GetMissions_Query(_context);
             var result = await query.ExecuteAsync();
@@ -80,10 +82,19 @@ namespace PlanetaryExplorationLogs.API.Controllers
         [HttpGet("{missionId}/discovery")]
         public async Task<ActionResult<RequestResult<List<DiscoveryFormDto>>>> GetDiscoveriesForMission(int missionId)
         {
-            var cmd = new GetDiscoveriesByMission_Command(_context, missionId);
+            var cmd = new GetDiscoveriesByMission_Query(_context, missionId);
             var result = await cmd.ExecuteAsync();
             return new JsonResult(result, _jsonOptions);
         }
+        // Get: api/missionDropdownDto
+        [HttpGet("dropdown")]
+        public async Task<ActionResult<RequestResult<List<MissionDropDownDto>>>> GetMissionDropDownDto()
+        {
+            var query = new GetMissionDropDownDto_Query(_context);
+            var result = await query.ExecuteAsync();
+            return result;
+        }
+
     }
 
     }

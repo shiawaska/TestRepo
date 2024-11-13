@@ -1,0 +1,27 @@
+<div>
+    <button *ngIf="!showForm" (click)="toggleForm()">Add a Planet</button>
+    <button *ngIf="!showHistory" (click)="toggleHistory()">Show History</button>
+    <div *ngIf="showForm">
+        <form (ngSubmit)="addPlanet($event)">
+            <span> Name </span>
+            <input type="text" name="name" placeholder="name" required [(ngModel)]="planet.name"> <br>
+            <span> Type </span>
+            <input type="text" name="type" placeholder="type" [(ngModel)]="planet.type"> <br>
+            <span> Climate </span>
+            <input type="text" name="climate" placeholder="climate" [(ngModel)]="planet.climate"> <br>
+            <span> Terrain </span>
+            <input type="number" name="terrain" placeholder="terrain" [(ngModel)]="planet.terrain" > <br>
+            <span> Population </span>
+            <input type="text" name="population" placeholder="population" [(ngModel)]="planet.population" > <br>
+            <button type="submit" >Create Planet</button>
+        </form>
+    </div>
+    <div *ngIf="showHistory">
+        <div *ngFor="let planet of planets; let i = index">
+            <p>name: <span class="red"> {{ planet.name }} </span></p>
+            <p>Description:<span class="red"> {{ planet.description }}</span></p>
+            <p>Image URL: <span class="red"> {{ planet.imageUrl }} </span></p>
+            <!-- <button (click)="deletePlanet(planet.id)">Remove</button> -->
+        </div>
+    </div>
+</div>
