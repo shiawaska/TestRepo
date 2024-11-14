@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {}
+    "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {}
   },
   "projects": {
-    "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {
+    "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+        "projectUniqueName": "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
         "projectName": "PlanetaryExplorationLogs.API",
-        "projectPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
-        "packagesPath": "C:\\Users\\Rotor\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\obj\\",
+        "projectPath": "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+        "packagesPath": "C:\\Users\\carlt\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rotor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

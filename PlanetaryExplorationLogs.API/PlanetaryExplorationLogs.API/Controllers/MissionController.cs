@@ -48,7 +48,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var query = new GetMissionsById_Query(_context, id);
             var result = await query.ExecuteAsync();
-            return new JsonResult(result, _jsonOptions);
+            return result;
         }
 
         // POST: api/mission

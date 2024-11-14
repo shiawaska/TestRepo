@@ -1,24 +1,27 @@
 <div class="missionDDDto">
   <select name="mission" [(ngModel)]="selectedMission">
-    <option *ngFor="let mission of missions" [value]="mission.id">
+    <option *ngFor="let mission of missions; let i = index" [value]="mission.id">
       {{ mission.name }}
-    </option>
-    <button (click)="selectMission(selectedMission)">Accept</button>
+    </option>    
   </select>
+  <button name="accept" (click)="selectMission(selectedMission)">Accept</button>
 </div>
 
 <div class="flex-grid">
-  <div class="col">
-    Missions
+  <div class="col" *ngIf="showMissionDetails">
+    
     <span class="name">Mission Name:{{ mission.name }} </span>
+    <br>
     <span class="date"> Mission Date: {{ mission.date }} </span>
+    <br>
     <span display="none" class="planetId">
       Planet: {{ mission.planetId }}
     </span>
+    <br>
     <span class="description"> Description: {{ mission.description }} </span>
   </div>
 
-  <div class="col">missions planets</div>
+  <div class="col">mission's planet</div>
 
-  <div class="col">mission discoveries</div>
+  <div class="col">mission's discoveries</div>
 </div>
