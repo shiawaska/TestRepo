@@ -1,28 +1,93 @@
-<div>
-    <button *ngIf="!showForm" (click)="toggleForm()">Add a Planet</button>
-    <button *ngIf="!showHistory" (click)="toggleHistory()">Show History</button>
-    <div *ngIf="showForm">
-        <form (ngSubmit)="addPlanet($event)">
-            <span> Name </span>
-            <input type="text" name="name" placeholder="name" required [(ngModel)]="planet.name"> <br>
-            <span> Type </span>
-            <input type="text" name="type" placeholder="type" [(ngModel)]="planet.type"> <br>
-            <span> Climate </span>
-            <input type="text" name="climate" placeholder="climate" [(ngModel)]="planet.climate"> <br>
-            <span> Terrain </span>
-            <input type="number" name="terrain" placeholder="terrain" [(ngModel)]="planet.terrain" > <br>
-            <span> Population </span>
-            <input type="text" name="population" placeholder="population" [(ngModel)]="planet.population" > <br>
-            <button type="submit" >Create Planet</button>
-        </form>
+<div class="Main" *ngIf="main">
+  <p>Here you will explore our planets and missions.</p>
+  <!-- <button *ngIf="!showPlanetList" (click)="listToggle()" >Planet List</button>
+    <button *ngIf="showPlanetList" (click)="listToggle()">Back</button> -->
+
+  <div *ngIf="showSelector" class="selector-container">
+    <p>Choose a planet to explore</p>
+    <select name="planets" [(ngModel)]="selectedPlanet">
+      <option *ngFor="let planet of planets" [value]="planet.id">
+        {{ planet.name }}
+      </option>
+    </select>
+    <button (click)="selectPlanet(selectedPlanet)">Get Planet</button>
+  </div>
+
+  <div *ngIf="showPlanet" name="planetInfo" class="planet-info">
+    <span>
+      Planet Name: <span class="bold">{{ planet.name }}</span></span
+    >
+    <span
+      >Planet Type: <span class="bold">{{ planet.type }}</span></span
+    >
+    <span
+      >Planet Climate: <span class="bold">{{ planet.climate }}</span></span
+    >
+    <span
+      >Planet Terrain: <span class="bold">{{ planet.terrain }}</span></span
+    >
+    <span
+      >Planet Population:
+      <span class="bold">{{ planet.population }}</span></span
+    >
+    <button (click)="deletePlanet(selectedPlanet)">Delete</button> // change to
+    get planets missions
+    <button (click)="showPlanetToggle()">Back</button>
+  </div>
+
+  <button *ngIf="!showPlanetList" (click)="listToggle()">Planet List</button>
+  <div *ngIf="showPlanetList" name="planetList" class="planet-list">
+    <button *ngIf="showPlanetList" (click)="listToggle()">Back</button>
+    <div *ngFor="let planet of planetlist">
+      <p>Planet Name: {{ planet.name }}</p>
+      <p>Planet Type: {{ planet.type }}</p>
+      <p>Planet Climate: {{ planet.climate }}</p>
+      <p>Planet Terrain: {{ planet.terrain }}</p>
+      <p>Planet Population: {{ planet.population }}</p>
     </div>
-    <div *ngIf="!showHistory">
-        <div *ngFor="let planet of planets; let i = index">
-            <p>Name: <span > {{ planet.name }} </span></p>
-            <p>Type:<span > {{ planet.type }}</span></p>
-            <p>Climate: <span c> {{ planet.climate }} </span></p>
-            <p>Terrain: <span >{{ planet.terrain }} </span></p>
-            <p>Population: <span > {{ planet.population }} </span></p>            
-        </div>
-    </div>
+  </div>
+</div>
+<button class="createPlanetButton" (click)="createplanetToggle()">
+  Create Planet
+</button>
+<div class="createplanet" *ngIf="createplanet">
+  <form (ngSubmit)="createPlanet($event)">
+    <input
+      type="text"
+      name="name"
+      placeholder="name"
+      required
+      [(ngModel)]="planet.name"
+    /><br />
+    <input
+      type="text"
+      name="type"
+      placeholder="type"
+      required
+      [(ngModel)]="planet.type"
+    /><br />
+    <input
+      type="text"
+      name="climate"
+      placeholder="climate"
+      required
+      [(ngModel)]="planet.climate"
+    /><br />
+    <input
+      type="text"
+      name="terrain"
+      placeholder="terrain"
+      required
+      [(ngModel)]="planet.terrain"
+    /><br />
+    <input
+      type="text"
+      name="population"
+      placeholder="population"
+      required
+      [(ngModel)]="planet.population"
+    /><br />
+    <button type="submit">Create</button>
+  </form>
+  <button (click)="createplanetCancel()">Back</button>
 </div>

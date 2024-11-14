@@ -1,33 +1,20 @@
-<div class="Main">
-<p> Here you will explore our planets and missions.</p>
+<h3>Welcome To Planetary Exploration Logs</h3>
 
-<button *ngIf="main" (click)="selectorToggle()" (click)="mainToggle()">Planet List</button>
-<div *ngIf="showSelector">
-    <!-- <select  [(value)]="selectedPlanet"]> -->
-        <select name="planets" [(ngModel)]="selectedPlanet">
-        <option *ngFor="let planet of planets" [value]="planet.id" >{{planet.name}}</option>        
-    </select>
-<button (click)="getPlanet(selectedPlanet)">Get Planet</button>
-</div>
-<div *ngIf="showPlanet" name="planetinfo">
-    <p>Planet Name: {{planet.name}}</p>
-    <p>Planet Type: {{planet.type}}</p>
-    <p>Planet Climate: {{planet.climate}}</p>
-    <p>Planet Terrain: {{planet.terrain}}</p>
-    <p>Planet Population: {{planet.population}}</p>
-    <button (click)="selectorToggle()" (click)="showPlanetToggle()">Back</button>
-</div>
-<div *ngIf="showPlanetList" name="planetList">
-    <div *ngFor="let planet of planetlist">
-        <p>Planet Name: {{planet.name}}</p>
-        <p>Planet Type: {{planet.type}}</p>
-        <p>Planet Climate: {{planet.climate}}</p>
-        <p>Planet Terrain: {{planet.terrain}}</p>
-        <p>Planet Population: {{planet.population}}</p>
-        
-    </div>
-    <button  (click)="mainToggle()">Back</button>
-
-</div>  
-</div>
-
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ratione
+  beatae quis perferendis corporis exercitationem eius quaerat, in eligendi
+  dignissimos, repellendus ex consequuntur adipisci deserunt sequi commodi est
+  error asperiores.
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel architecto
+  reiciendis labore, asperiores sit eligendi laboriosam nostrum unde blanditiis
+  similique suscipit voluptatum, delectus eaque laudantium hic neque. Officiis
+  quas a beatae totam! Nulla deserunt nisi a possimus maxime tenetur ab commodi
+  placeat id expedita dolorum distinctio incidunt esse amet, doloribus veritatis
+  fugiat deleniti cum repellendus voluptatibus, maiores optio ducimus ea
+  laborum! Sit qui, tenetur voluptate soluta cum officiis obcaecati architecto,
+  saepe ducimus beatae eum magni odio earum, consequuntur temporibus ipsa porro
+  reiciendis quod esse facilis quam dolore illum deserunt. Quasi fuga atque
+  blanditiis beatae. Ratione perferendis similique obcaecati dolorum laborum!
+</p>

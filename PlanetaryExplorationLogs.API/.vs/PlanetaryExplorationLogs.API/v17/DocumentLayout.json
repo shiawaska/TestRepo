@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Planets\\GetPlanetById\\GetPlanetById_Query.cs",
               "ToolTip": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\Requests\\Queries\\Planets\\GetPlanetById\\GetPlanetById_Query.cs",
               "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Planets\\GetPlanetById\\GetPlanetById_Query.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAIwDsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwDEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T04:27:14.749Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Planets\\GetPlanets\\GetPlanets\u0027_Handler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:58:00.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T03:58:00.921Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "PlanetaryExplorationLogs.API\\Requests\\Queries\\Planets\\GetPlanets\\GetPlanets_Query.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:54:31.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T03:54:31.922Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "PlanetaryExplorationLogs.API\\Controllers\\PlanetController.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAwwD4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:50:40.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T03:50:40.434Z"
             }
           ]
         }
