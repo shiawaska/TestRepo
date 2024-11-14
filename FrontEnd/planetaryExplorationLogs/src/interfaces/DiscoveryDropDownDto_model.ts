@@ -1,5 +1,4 @@
-export interface DiscoveryDropDownDto
-{
-    Id: number;
-    Name: string;
+export interface DiscoveryDropDownDto {
+  id: number;
+  name: string;
 }

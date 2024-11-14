@@ -1,5 +1,4 @@
-export interface MissionDropDownDto
-{
-  Id: number;
-  Name: string;  
+export interface MissionDropDownDto {
+  id: number;
+  name: string;
 }
