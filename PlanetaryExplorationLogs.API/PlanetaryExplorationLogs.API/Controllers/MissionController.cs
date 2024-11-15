@@ -48,7 +48,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var query = new GetMissionsById_Query(_context, id);
             var result = await query.ExecuteAsync();
-            return new JsonResult(result, _jsonOptions);
+            return result;
         }
 
         // POST: api/mission
@@ -57,7 +57,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var cmd = new CreateMission_Command(_context, mission);
             var result = await cmd.ExecuteAsync();
-            return new JsonResult(result, _jsonOptions);
+            return result;
         }
 
         // PUT: api/mission/{id}
@@ -66,7 +66,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var cmd = new UpdateMission_Command(_context, Id, MissionUpdate);
             var result = await cmd.ExecuteAsync();
-            return new JsonResult(result, _jsonOptions);
+            return result;
         }
 
         // DELETE: api/mission/{id}
@@ -75,7 +75,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var cmd = new DeleteMission_Command(_context, id);
             var result = await cmd.ExecuteAsync();
-            return new JsonResult(result, _jsonOptions);
+            return result;
         }
 
         // GET: api/mission/{missionId}/discovery
@@ -84,7 +84,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var cmd = new GetDiscoveriesByMission_Query(_context, missionId);
             var result = await cmd.ExecuteAsync();
-            return new JsonResult(result, _jsonOptions);
+            return result;
         }
         // Get: api/missionDropdownDto
         [HttpGet("dropdown")]

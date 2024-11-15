@@ -453,6 +453,26 @@
     ]
   },
   {
+    "ContainingType": "PlanetaryExplorationLogs.API.Controllers.DiscoveryController",
+    "Method": "GetDiscoveryDropDown",
+    "RelativePath": "dropdown",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "PlanetaryExplorationLogs.API.Utility.Patterns.RequestResult\u00601[[System.Collections.Generic.List\u00601[[PlanetaryExplorationLogs.API.Data.DTO.DiscoveryDropDownDto, PlanetaryExplorationLogs.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "PlanetaryExplorationLogs.API.Controllers.PlanetController",
     "Method": "GetPlanets",
     "RelativePath": "planets",

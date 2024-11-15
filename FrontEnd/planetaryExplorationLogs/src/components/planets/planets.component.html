@@ -1,12 +1,10 @@
+<h3 style="text-align: center">Here you will explore our Planets</h3>
 <div class="Main" *ngIf="main">
-  <p>Here you will explore our planets and missions.</p>
-  <!-- <button *ngIf="!showPlanetList" (click)="listToggle()" >Planet List</button>
-    <button *ngIf="showPlanetList" (click)="listToggle()">Back</button> -->
-
   <div *ngIf="showSelector" class="selector-container">
-    <p>Choose a planet to explore</p>
+    Choose a planet to explore
+
     <select name="planets" [(ngModel)]="selectedPlanet">
-      <option *ngFor="let planet of planets" [value]="planet.id">
+      <option *ngFor="let planet of planets; let i = index" [value]="planet.id">
         {{ planet.name }}
       </option>
     </select>
@@ -30,28 +28,60 @@
       >Planet Population:
       <span class="bold">{{ planet.population }}</span></span
     >
-    <button (click)="deletePlanet(selectedPlanet)">Delete</button> // change to
-    get planets missions
+    <button (click)="deletePlanet(selectedPlanet)">Delete Planet</button>
+    <button (click)="updatePlanetToggle(true)">Update Planet</button>
+
     <button (click)="showPlanetToggle()">Back</button>
   </div>
+</div>
 
-  <button *ngIf="!showPlanetList" (click)="listToggle()">Planet List</button>
-  <div *ngIf="showPlanetList" name="planetList" class="planet-list">
-    <button *ngIf="showPlanetList" (click)="listToggle()">Back</button>
-    <div *ngFor="let planet of planetlist">
-      <p>Planet Name: {{ planet.name }}</p>
-      <p>Planet Type: {{ planet.type }}</p>
-      <p>Planet Climate: {{ planet.climate }}</p>
-      <p>Planet Terrain: {{ planet.terrain }}</p>
-      <p>Planet Population: {{ planet.population }}</p>
-    </div>
+<div class="createPlanetButton">
+  <button *ngIf="main" (click)="createplanetToggle()">Create Planet</button>
+  <div class="createplanet" *ngIf="createplanet">
+    <form (ngSubmit)="createPlanet($event)">
+      <input
+        type="text"
+        name="name"
+        placeholder="name"
+        required
+        [(ngModel)]="planet.name"
+      /><br />
+      <input
+        type="text"
+        name="type"
+        placeholder="type"
+        required
+        [(ngModel)]="planet.type"
+      /><br />
+      <input
+        type="text"
+        name="climate"
+        placeholder="climate"
+        required
+        [(ngModel)]="planet.climate"
+      /><br />
+      <input
+        type="text"
+        name="terrain"
+        placeholder="terrain"
+        required
+        [(ngModel)]="planet.terrain"
+      /><br />
+      <input
+        type="text"
+        name="population"
+        placeholder="population"
+        required
+        [(ngModel)]="planet.population"
+      /><br />
+      <button type="submit">Create</button>
+    </form>
+    <button (click)="createplanetCancel()">Cancel</button>
   </div>
 </div>
-<button class="createPlanetButton" (click)="createplanetToggle()">
-  Create Planet
-</button>
-<div class="createplanet" *ngIf="createplanet">
-  <form (ngSubmit)="createPlanet($event)">
+<div *ngIf="updatePlanetForm" class="updatePlanet">
+  <button (click)="updatePlanetToggle(false)">return</button>
+  <div class="updatePlanet">
     <input
       type="text"
       name="name"
@@ -87,7 +117,20 @@
       required
       [(ngModel)]="planet.population"
     /><br />
-    <button type="submit">Create</button>
-  </form>
-  <button (click)="createplanetCancel()">Back</button>
+    <button (click)="updatePlanet($event)">Update</button>
+  </div>
+  <div class="planet-list">
+    <button *ngIf="!showPlanetList" (click)="listToggle()">Planet List</button>
+    <div *ngIf="showPlanetList" name="planetList" class="planet-list">
+      <button *ngIf="showPlanetList" (click)="listToggle()">Back</button>
+      <div class="planet-list" *ngFor="let planet of planetlist">
+        <p><span>Planet Name:</span> {{ planet.name }}</p>
+        <p><span>Planet Type:</span> {{ planet.type }}</p>
+        <p><span>Planet Climate:</span> {{ planet.climate }}</p>
+        <p><span>Planet Terrain:</span> {{ planet.terrain }}</p>
+        <p><span>Planet Population:</span> {{ planet.population }}</p>
+        <br />
+      </div>
+    </div>
+  </div>
 </div>

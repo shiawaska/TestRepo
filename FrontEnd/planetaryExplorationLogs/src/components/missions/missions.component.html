@@ -1,24 +1,140 @@
-<div class="missionDDDto">
+<div class="missionSelect" *ngIf="main">
   <select name="mission" [(ngModel)]="selectedMission">
-    <option *ngFor="let mission of missions" [value]="mission.id">
+    <option
+      *ngFor="let mission of missions; let i = index"
+      [value]="mission.id"
+    >
       {{ mission.name }}
     </option>
-    <button (click)="selectMission(selectedMission)">Accept</button>
   </select>
+  <button name="select" (click)="selectMission(selectedMission)">Select</button>
+  <button name="reate" (click)="createMissionToggle(true)">
+    Create Mission
+  </button>
+  <button
+    name="delete"
+    *ngIf="showMissionDetails"
+    (click)="deleteMission(selectedMission)"
+  >
+    Delete Mission <span> {{ mission.name }} </span>
+  </button>
+  <button
+    name="update"
+    *ngIf="showMissionDetails"
+    (click)="updateMissionToggle(true)"
+  >
+    Update Mission <span>{{ mission.name }}</span>
+  </button>
 </div>
+<div class="missionDDDto">
+  <div class="flex-grid" *ngIf="showMissionDetails">
+    <div class="col">
+      <h3>Mission's Details</h3>
+      <div class="name"><span>Mission Name:</span> {{ mission.name }}</div>
+      <div class="date"><span>Mission Date:</span> {{ mission.date }}</div>
+      <div display="none" class="planetId">
+        <span>Planet:</span> {{ planet.name }}
+      </div>
+      <div class="description">
+        <span>Description:</span> {{ mission.description }}
+      </div>
+    </div>
 
-<div class="flex-grid">
-  <div class="col">
-    Missions
-    <span class="name">Mission Name:{{ mission.name }} </span>
-    <span class="date"> Mission Date: {{ mission.date }} </span>
-    <span display="none" class="planetId">
-      Planet: {{ mission.planetId }}
-    </span>
-    <span class="description"> Description: {{ mission.description }} </span>
+    <div class="col">
+      <h3>Planet's Details</h3>
+      <div class="planet-info">
+        <div class="planet-name">
+          <span>Planet Name:</span> {{ planet.name }}
+        </div>
+        <div class="planet-type">
+          <span>Planet Type:</span> {{ planet.type }}
+        </div>
+        <div class="planet-climate">
+          <span>Planet Climate:</span> {{ planet.climate }}
+        </div>
+        <div class="planet-terrain">
+          <span>Planet Terrain:</span> {{ planet.terrain }}
+        </div>
+        <div class="planet-population">
+          Planet Population: {{ planet.population }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col" *ngIf="showMissionDetails && discoveries.length > 0">
+      <h3>Discoveries</h3>
+      <div
+        name="discoveries-loop"
+        *ngFor="let discovery of discoveries; let i = index"
+      >
+        <div><span>Name:</span> {{ discovery.name }}</div>
+        <div><span>Location:</span> {{ discovery.location }}</div>
+        <div><span> Description:</span> {{ discovery.description }}</div>
+        <div>
+          <span> Discovery Type Name:</span>
+          {{ getDiscoveryTypeName(discovery.discoveryTypeId) }}
+        </div>
+        <div>
+          <span> Discovery Type Description:</span>
+          {{ getDiscoveryTypeDescription(discovery.discoveryTypeId) }}
+        </div>
+        <br />
+      </div>
+    </div>
   </div>
+</div>
+<div class="createMissionForm" *ngIf="createMissionForm">
+  <button name="return" (click)="createMissionToggle(false)">Return</button>
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+    [(ngModel)]="mission.name"
+  />
+  <input
+    type="date"
+    name="date"
+    placeholder="Date"
+    [(ngModel)]="mission.date"
+  />
+  <select name="planetId" [(ngModel)]="mission.planetId">
+    <option *ngFor="let planet of planets; let i = index" [value]="planet.id">
+      {{ planet.name }}
+    </option>
+  </select>
+  <input
+    type="text"
+    name="description"
+    placeholder="Description"
+    [(ngModel)]="mission.description"
+  />
+  <button name="create" (click)="createMission()">Create</button>
+</div>
+<div class="updateMissionForm" *ngIf="updateMissionForm">
+  <button name="return" (click)="updateMissionToggle(false)">Return</button>
 
-  <div class="col">missions planets</div>
-
-  <div class="col">mission discoveries</div>
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+    [(ngModel)]="mission.name"
+  />
+  <input
+    type="date"
+    name="date"
+    placeholder="Date"
+    [(ngModel)]="mission.date"
+  />
+  <select name="planetId" [(ngModel)]="mission.planetId">
+    <option *ngFor="let planet of planets; let i = index" [value]="planet.id">
+      {{ planet.name }}
+    </option>
+  </select>
+  <input
+    type="text"
+    name="description"
+    placeholder="Description"
+    [(ngModel)]="mission.description"
+  />
+  <button name="update" (click)="updateMission()">Update</button>
 </div>

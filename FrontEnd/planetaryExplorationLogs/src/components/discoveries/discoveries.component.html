@@ -1,0 +1,132 @@
+<div class="center">
+  <h3>Findout about all the discoveries here!</h3>
+  <div class="discovery" *ngIf="discoverySelector">
+    <select name="discoveries" [(ngModel)]="SelectedDiscovery">
+      <option
+        *ngFor="let discovery of discoveriesDropDown; let i = index"
+        [value]="discovery.id"
+      >
+        {{ discovery.name }}
+      </option>
+    </select>
+    <button name="select" (click)="getDiscovery(SelectedDiscovery)">
+      Select
+    </button>
+    <br />
+    <button name="create" (click)="createDiscoveryToggle(true)">
+      Create a Discovery
+    </button>
+  </div>
+
+  <div class="discovery" *ngIf="showDiscoveryDetails">
+    <div><span> Name: </span> {{ discovery.name }}</div>
+    <div><span> Description: </span> {{ discovery.description }}</div>
+    <div><span> Location: </span> {{ discovery.location }}</div>
+    <br />
+    <div>
+      <span> Discovery Type Name: </span>
+      {{ getDiscoveryTypeName(discovery.discoveryTypeId) }}
+    </div>
+    <div>
+      <span> Discovery Type Description: </span>
+      {{ getDiscoveryTypeDescription(discovery.discoveryTypeId) }}
+    </div>
+    <br />
+    <div class="buttons">
+      <button name="return" (click)="showDiscoveryDetails = false">
+        Return
+      </button>
+      <button name="update" (click)="updateDiscoveryToggle(true)">
+        Update
+      </button>
+      <button name="delete" (click)="deleteDiscovery(SelectedDiscovery)">
+        Delete
+      </button>
+      <!-- <span> Mission: </span> {{ getMission(discovery.missionId) }} -->
+    </div>
+  </div>
+  <div class="form-container" *ngIf="updateDiscoveryform">
+    <span>Name:</span
+    ><input
+      type="text"
+      name="name"
+      placeholder="Name"
+      [(ngModel)]="discovery.name"
+    />
+    <br />
+    <span>Description:</span>
+    <input
+      type="textbox"
+      name="description"
+      placeholder="Description"
+      [(ngModel)]="discovery.description"
+    /><br />
+    <span>Location:</span>
+    <input
+      type="text"
+      name="location"
+      placeholder="Location"
+      [(ngModel)]="discovery.location"
+    /><br />
+    <span>Discovery Type:</span>
+    <select name="discoveryTypeId" [(ngModel)]="discovery.discoveryTypeId">
+      <option
+        *ngFor="let discoveryType of discoveryTypes; let i = index"
+        [value]="discoveryType.id"
+      >
+        {{ discoveryType.name }}
+      </option>
+    </select>
+    <button name="update" (click)="updateDiscovery()">Update</button>
+    <br />
+    <button name="back" (click)="updateDiscoveryToggle(false)">Return</button>
+  </div>
+  <div class="form-container" *ngIf="createDiscoveryForm">
+    <div class="createDiscoveryForm" *ngIf="createDiscoveryForm">
+      <span>Mission:</span>
+      <select [(ngModel)]="selectedMission">
+        <option
+          *ngFor="let mission of missions; let i = index"
+          [value]="mission.id"
+        >
+          {{ mission.name }}
+        </option>
+      </select>
+      <br />
+      <span>Name:</span
+      ><input
+        type="text"
+        name="name"
+        placeholder="Name"
+        [(ngModel)]="discovery.name"
+      />
+      <br />
+      <span>Description:</span>
+      <input
+        type="textbox"
+        name="description"
+        placeholder="Description"
+        [(ngModel)]="discovery.description"
+      /><br />
+      <span>Location:</span>
+      <input
+        type="text"
+        name="location"
+        placeholder="Location"
+        [(ngModel)]="discovery.location"
+      /><br />
+      <span>Discovery Type:</span>
+      <select name="discoveryTypeId" [(ngModel)]="discovery.discoveryTypeId">
+        <option
+          *ngFor="let discoveryType of discoveryTypes; let i = index"
+          [value]="discoveryType.id"
+        >
+          {{ discoveryType.name }}
+        </option>
+      </select>
+      <button name="create" (click)="createDiscovery()">Create</button>
+      <br />
+      <button name="back" (click)="createDiscoveryToggle(false)">Return</button>
+    </div>
+  </div>
+</div>

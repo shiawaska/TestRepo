@@ -21,16 +21,8 @@ export class PlanetsComponent implements OnInit {
 
   // global variables
   planets: PlanetDropDownDto[] = [];
-
   planetlist: PlanetFormDto[] = [];
   planet: PlanetFormDto = {
-    name: '',
-    type: '',
-    climate: '',
-    terrain: '',
-    population: '',
-  };
-  planetDto: PlanetFormDto = {
     name: '',
     type: '',
     climate: '',
@@ -44,9 +36,10 @@ export class PlanetsComponent implements OnInit {
   showPlanetList: boolean = false;
   main: boolean = true;
   createplanet: boolean = false;
+  updatePlanetForm: boolean = false;
 
   // selected planet from dropdown
-  selectedPlanet: number = 1;
+  selectedPlanet: number = 2;
 
   // error message
   errorMessage: any;
@@ -117,6 +110,14 @@ export class PlanetsComponent implements OnInit {
   createplanetToggle(): void {
     this.main = false;
     this.createplanet = true;
+    this.showPlanet = false;
+    this.planet = {
+      name: '',
+      type: '',
+      climate: '',
+      terrain: '',
+      population: '',
+    };
   }
   // fucntion to cancel the creation of a planet
   createplanetCancel(): void {
@@ -129,7 +130,7 @@ export class PlanetsComponent implements OnInit {
   createPlanet(event: Event): void {
     event.preventDefault();
 
-    this.planetsService.addPlanet(this.planetDto).subscribe(
+    this.planetsService.addPlanet(this.planet).subscribe(
       (response) => {
         console.log('Planet created:', response);
       },
@@ -143,5 +144,40 @@ export class PlanetsComponent implements OnInit {
     this.getPlanetsDropdown();
     this.showPlanetToggle();
     this.main = true;
+    this.showSelector = true;
+    this.showPlanet = false;
+  }
+  updatePlanetToggle(bool: boolean): void {
+    this.updatePlanetForm = bool;
+    this.showPlanet = false;
+    this.main = !bool;
+    this.createplanet = false;
+    this.showSelector = !bool;
+  }
+  updatePlanet(event: Event): void {
+    event.preventDefault();
+    this.planetsService
+      .updatePlanet(this.planet, this.selectedPlanet)
+      .subscribe(
+        (response) => {
+          this.selectedPlanet = response;
+          console.log('Planet updated:', response);
+        },
+        (error) => {
+          this.errorMessage = error;
+          console.error('Error updating planet:', error);
+        }
+      );
+    this.showPlanetToggle();
+    this.getPlanets();
+    this.getPlanetsDropdown();
+    this.planet = {
+      name: '',
+      type: '',
+      climate: '',
+      terrain: '',
+      population: '',
+    };
+    this.updatePlanetToggle(false);
   }
 }

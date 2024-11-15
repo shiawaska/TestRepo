@@ -10,6 +10,7 @@ using PlanetaryExplorationLogs.API.Requests.Commands.Discoveries.CreateDiscovery
 using PlanetaryExplorationLogs.API.Requests.Queries.Discoveries.GetDiscoveryById;
 using PlanetaryExplorationLogs.API.Requests.Commands.Discoveries.DeleteDiscoveryById;
 using PlanetaryExplorationLogs.API.Requests.Queries.Discoveries.GetDiscoveries;
+using PlanetaryExplorationLogs.API.Requests.Queries.Discoveries.GetDiscoveryDropDown;
 
 
 namespace PlanetaryExplorationLogs.API.Controllers
@@ -53,7 +54,7 @@ namespace PlanetaryExplorationLogs.API.Controllers
 
         // PUT: api/discovery/{id}
         [HttpPut("{id}")]
-        public async Task<ActionResult<RequestResult<int>>> UpdateDiscovery(int id, [FromBody]DiscoveryFormDto discover) // was missing Task ,async and return type
+        public async Task<ActionResult<RequestResult<int>>> UpdateDiscovery(int id, [FromBody] DiscoveryFormDto discover) // was missing Task ,async and return type
         {
             var cmd = new UpdateDiscoveryById_Command(_context, id, discover);
             return await cmd.ExecuteAsync();
@@ -65,6 +66,13 @@ namespace PlanetaryExplorationLogs.API.Controllers
         {
             var cmd = new DeleteDiscovery_Command(_context, id);
             return await cmd.ExecuteAsync();
+        }
+
+        [HttpGet("/dropdown")]
+        public async Task<ActionResult<RequestResult<List<DiscoveryDropDownDto>>>> GetDiscoveryDropDown()
+        {
+            var query = new GetDiscoveryDropDown_Query(_context);
+            return await query.ExecuteAsync();
         }
     }
 }

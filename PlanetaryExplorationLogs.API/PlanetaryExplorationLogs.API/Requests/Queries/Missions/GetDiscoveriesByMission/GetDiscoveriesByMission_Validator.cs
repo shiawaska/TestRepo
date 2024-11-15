@@ -30,12 +30,12 @@ namespace PlanetaryExplorationLogs.API.Requests.Queries.Missions.GetDiscoveriesB
 					HttpStatusCode.NotFound,
 					"Mission not found");
 			}
-			if (MissionExists.Discoveries.Count == 0)
-			{
-				return await InvalidResultAsync(
-					HttpStatusCode.NotFound,
-					"No discoveries found for this mission");
-			}
+			//if (MissionExists.Discoveries.Count == 0)
+			//{
+			//	return await InvalidResultAsync(
+			//		HttpStatusCode.NotFound,
+			//		"No discoveries found for this mission");
+			//}
 
 
                 return await ValidResultAsync();

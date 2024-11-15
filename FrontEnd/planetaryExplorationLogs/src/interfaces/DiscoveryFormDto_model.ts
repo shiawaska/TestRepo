@@ -1,8 +1,7 @@
-export interface DiscoveryFormDto
-{
-    MissionId: number;
-    DiscoveryTypeId: number;
-    Name: string;
-    Description: string;
-    Location: string;
+export interface DiscoveryFormDto {
+  missionId: number;
+  discoveryTypeId: number;
+  name: string;
+  description: string;
+  location: string;
 }
