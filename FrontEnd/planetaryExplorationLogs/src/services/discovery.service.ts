@@ -21,6 +21,13 @@ export class DiscoveryService {
     );
   }
 
+  // command functions
+  createDiscovery(discovery: DiscoveryFormDto): Observable<number> {
+    return this.httpclient
+      .post<number>('http://localhost:5125/api/Discovery', discovery)
+      .pipe(catchError(this.handleError));
+  }
+
   deleteDiscovery(id: number): Observable<number> {
     return this.httpclient
       .delete<number>(`http://localhost:5125/api/Discovery/${id}`)
@@ -33,6 +40,7 @@ export class DiscoveryService {
       .pipe(catchError(this.handleError));
   }
 
+  // query functions
   getDiscovery(id: number): Observable<DiscoveryFormDto> {
     return this.httpclient
       .get<requestResult<DiscoveryFormDto>>(
@@ -44,24 +52,17 @@ export class DiscoveryService {
       );
   }
 
-  createDiscovery(discovery: DiscoveryFormDto): Observable<number> {
-    return this.httpclient
-      .post<number>('http://localhost:5125/api/Discovery', discovery)
-      .pipe(catchError(this.handleError));
-  }
-
   getDiscoveries(): Observable<DiscoveryFormDto[]> {
     return this.httpclient
       .get<requestResult<DiscoveryFormDto[]>>(
         'http://localhost:5125/api/Discovery'
       )
       .pipe(
-        map((response) => ({
-          data: response.data,
-        })),
+        map((response) => response.data),
         catchError(this.handleError)
       );
   }
+
   getDiscoveriesForMission(missionId: number): Observable<DiscoveryResponse> {
     return this.httpclient
       .get<requestResult<DiscoveryFormDto[]>>(
@@ -75,6 +76,7 @@ export class DiscoveryService {
         catchError(this.handleError)
       );
   }
+
   getDiscoveryTypes(): Observable<DiscoveryTypeDto[]> {
     return this.httpclient
       .get<requestResult<DiscoveryTypeDto[]>>(
@@ -85,6 +87,7 @@ export class DiscoveryService {
         catchError(this.handleError)
       );
   }
+
   getDiscoveriesDropDownDto(): Observable<DiscoveryDropDownDto[]> {
     return this.httpclient
       .get<requestResult<DiscoveryDropDownDto[]>>(

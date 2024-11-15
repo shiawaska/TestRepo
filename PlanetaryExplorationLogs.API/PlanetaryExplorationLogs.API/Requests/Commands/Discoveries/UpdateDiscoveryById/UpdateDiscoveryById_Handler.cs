@@ -24,6 +24,7 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Discoveries.UpdateDisco
             discoveryModel.Name = _Discovery.Name;
             discoveryModel.Description = _Discovery.Description;
             discoveryModel.Location = _Discovery.Location;
+            discoveryModel.DiscoveryTypeId = _Discovery.DiscoveryTypeId;
             DbContext.Discoveries.Update(discoveryModel);
             await DbContext.SaveChangesAsync();
 

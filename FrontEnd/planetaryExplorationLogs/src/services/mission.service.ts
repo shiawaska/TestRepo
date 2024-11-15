@@ -18,45 +18,68 @@ export class MissionService {
       () => new Error('Something bad happened; Check Mission service.')
     );
   }
+  // query functions
+  getMission(id: number): Observable<MissionFormDto> {
+    return this.httpclient
+      .get<requestResult<MissionFormDto>>(
+        `http://localhost:5125/api/Mission/${id}`
+      )
+      .pipe(
+        map((response) => response.data),
+        catchError(this.handleError)
+      );
+  }
 
   getMissionDropDownDto(): Observable<MissionDropDownDto[]> {
     return this.httpclient
-      .get<requestResult<MissionDropDownDto[]>>('http://localhost:5125/api/Mission/dropdown')
+      .get<requestResult<MissionDropDownDto[]>>(
+        'http://localhost:5125/api/Mission/dropdown'
+      )
       .pipe(
-        map(response => response.data),
-      catchError(this.handleError));
+        map((response) => response.data),
+        catchError(this.handleError)
+      );
   }
+
   getDiscoveriesForMission(missionId: number): Observable<DiscoveryFormDto[]> {
     return this.httpclient
       .get<requestResult<DiscoveryFormDto[]>>(
         `http://localhost:5125/api/Mission/${missionId}/discovery`
       )
-      .pipe(map(response => response.data),
-      catchError(this.handleError));
+      .pipe(
+        map((response) => response.data),
+        catchError(this.handleError)
+      );
   }
+
+  //command functions
   deleteMission(id: number): Observable<number> {
     return this.httpclient
       .delete<requestResult<number>>(`http://localhost:5125/api/Mission/${id}`)
-      .pipe(map(response => response.data),
-      catchError(this.handleError));
+      .pipe(
+        map((response) => response.data),
+        catchError(this.handleError)
+      );
   }
 
   updateMission(mission: MissionFormDto, id: number): Observable<number> {
     return this.httpclient
-      .put<requestResult<number>>(`http://localhost:5125/api/Mission/${id}`, mission)
-      .pipe(map(response => response.data), catchError(this.handleError));
+      .put<requestResult<number>>(
+        `http://localhost:5125/api/Mission/${id}`,
+        mission
+      )
+      .pipe(
+        map((response) => response.data),
+        catchError(this.handleError)
+      );
   }
+
   createMission(mission: MissionFormDto): Observable<number> {
     return this.httpclient
       .post<requestResult<number>>('http://localhost:5125/api/Mission', mission)
-      .pipe(map(response => response.data), catchError(this.handleError));
-  }
-  getMission(id: number): Observable<MissionFormDto> {
-    return this.httpclient
-      .get<requestResult<MissionFormDto>>(`http://localhost:5125/api/Mission/${id}`)
       .pipe(
-        map(response => response.data), 
-        catchError(this.handleError));
+        map((response) => response.data),
+        catchError(this.handleError)
+      );
   }
-  
 }
