@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanetaryExplorationLogs.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0469ed26ca0ab8141507fd4ae4556eb0947e0a51")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d925043c4a5e15589f2008644461fa32b153480")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanetaryExplorationLogs.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanetaryExplorationLogs.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

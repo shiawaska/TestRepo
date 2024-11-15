@@ -63,7 +63,7 @@ export class DiscoveriesComponent implements OnInit {
     this.getDiscoveriesDropDownDto();
     this.getMissionDropdown();
   }
-
+  // query functions
   getMission(id: number): Observable<string> {
     return this.missionService.getMission(id).pipe(
       map((mission) => mission.name),
@@ -104,22 +104,6 @@ export class DiscoveriesComponent implements OnInit {
       });
   }
 
-  deleteDiscovery(id: number): void {
-    this.discoveryService.deleteDiscovery(id).subscribe(() => {
-      this.getDiscoveries();
-      this.getDiscoveriesDropDownDto();
-    });
-  }
-
-  updateDiscovery(): void {
-    this.discoveryService
-      .updateDiscovery(this.discovery, this.SelectedDiscovery)
-      .subscribe(() => {
-        this.getDiscoveries();
-        this.updateDiscoveryToggle(false);
-      });
-  }
-
   getDiscovery(id: number): void {
     this.discoveryService
       .getDiscovery(id)
@@ -151,6 +135,25 @@ export class DiscoveriesComponent implements OnInit {
     }
     return 'Description not found';
   }
+
+  // command functions
+  deleteDiscovery(id: number): void {
+    this.discoveryService.deleteDiscovery(id).subscribe(() => {
+      this.getDiscoveries();
+      this.getDiscoveriesDropDownDto();
+      this.showDiscoveryDetails = false;
+    });
+  }
+
+  updateDiscovery(): void {
+    this.discoveryService
+      .updateDiscovery(this.discovery, this.SelectedDiscovery)
+      .subscribe(() => {
+        this.getDiscoveries();
+        this.updateDiscoveryToggle(false);
+      });
+  }
+
   createDiscovery(): void {
     this.discovery.missionId = this.selectedMission;
     this.discoveryService.createDiscovery(this.discovery).subscribe(() => {

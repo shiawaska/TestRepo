@@ -29,7 +29,8 @@ namespace PlanetaryExplorationLogs.API.Requests.Commands.Discoveries.DeleteDisco
 
                 };
             }
-
+            DbContext.Discoveries.Remove(DiscoveryModel);
+            await DbContext.SaveChangesAsync();
 
 
             var result = new RequestResult<int>

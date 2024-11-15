@@ -533,3 +533,7 @@ D:\repos\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\
 D:\repos\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\Debug\net8.0\PlanetaryExplorationLogs.API.pdb
 D:\repos\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\Debug\net8.0\PlanetaryExplorationLogs.API.genruntimeconfig.cache
 D:\repos\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\Debug\net8.0\ref\PlanetaryExplorationLogs.API.dll
+E:\github\Test repo\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\bin\Debug\net8.0\PlanetaryExplorationLogs.API.staticwebassets.endpoints.json
+E:\github\Test repo\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\github\Test repo\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\Debug\net8.0\staticwebassets\msbuild.PlanetaryExplorationLogs.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+E:\github\Test repo\TestRepo\PlanetaryExplorationLogs.API\PlanetaryExplorationLogs.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

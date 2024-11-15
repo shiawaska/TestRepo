@@ -10,6 +10,7 @@ import { PlanetFormDto } from '../../interfaces/PlanetFormDto_model';
 import { PlanetDropDownDto } from '../../interfaces/PlanetDropDownDto_model';
 import { DiscoveryFormDto } from '../../interfaces/DiscoveryFormDto_model';
 import { DiscoveryTypeDto } from '../../interfaces/DiscoveryTypeDto_model';
+import { DiscoveryResponse } from '../../interfaces/DiscoveryResponseDto_model';
 
 @Component({
   selector: 'app-missions',
@@ -67,33 +68,20 @@ export class MissionsComponent implements OnInit {
     this.getPlanetDropdownDto();
   }
 
-  selectMission(id: number): void {
-    this.MissionService.getMission(id).subscribe((mission: MissionFormDto) => {
-      this.mission = mission;
-      console.log('mission', this.mission, id);
-      this.planetsService.getPlanet(mission.planetId).subscribe((planet) => {
-        this.planet = planet;
-        this.getDiscoveriesForMission(id);
-      });
-      this.showMissionDetails = true;
-    });
-  }
-
-  getMissionDropdown(): void {
-    this.MissionService.getMissionDropDownDto().subscribe(
-      (missions: MissionDropDownDto[]) => {
-        console.log('missions', missions);
-        this.missions = missions;
-      }
-    );
-  }
-
+  //query functions
   getDiscoveriesForMission(missionId: number): void {
     this.discoveryService
       .getDiscoveriesForMission(missionId)
-      .subscribe((discoveries) => {
-        this.discoveries = discoveries;
-        console.log('discoveries', discoveries);
+      .subscribe((response: DiscoveryResponse) => {
+        this.discoveries = Array.isArray(response.data)
+          ? response.data.filter(
+              (discovery): discovery is DiscoveryFormDto =>
+                'missionId' in discovery &&
+                'discoveryTypeId' in discovery &&
+                'description' in discovery &&
+                'location' in discovery
+            )
+          : [];
       });
   }
 
@@ -124,30 +112,28 @@ export class MissionsComponent implements OnInit {
     return 'Description not found';
   }
 
-  deleteMission(id: number): void {
-    this.MissionService.deleteMission(id).subscribe((result) => {
-      console.log('result', result);
-      this.getMissionDropdown();
-      this.showMissionDetails = false;
-    });
-  }
-
-  createMissionToggle(bool: boolean): void {
-    this.createMissionForm = bool;
-    this.showMissionDetails = false;
-    this.main = !bool;
-    this.mission = {
-      name: '',
-      date: new Date(),
-      planetId: 0,
-      description: '',
-    };
+  getMissionDropdown(): void {
+    this.MissionService.getMissionDropDownDto().subscribe(
+      (missions: MissionDropDownDto[]) => {
+        console.log('missions', missions);
+        this.missions = missions;
+      }
+    );
   }
 
   getPlanetDropdownDto(): void {
     this.planetsService.getPlanetsDropdown().subscribe((planets) => {
       this.planets = planets;
       console.log('planets', planets);
+    });
+  }
+
+  // command functions
+  deleteMission(id: number): void {
+    this.MissionService.deleteMission(id).subscribe((result) => {
+      console.log('result', result);
+      this.getMissionDropdown();
+      this.showMissionDetails = false;
     });
   }
 
@@ -159,13 +145,6 @@ export class MissionsComponent implements OnInit {
     });
   }
 
-  updateMissionToggle(bool: boolean): void {
-    this.updateMissionForm = bool;
-    this.createMissionForm = false;
-    this.showMissionDetails = false;
-    this.main = !bool;
-  }
-
   updateMission(): void {
     this.MissionService.updateMission(
       this.mission,
@@ -174,6 +153,37 @@ export class MissionsComponent implements OnInit {
       console.log('result', result);
       this.getMissionDropdown();
       this.updateMissionToggle(false);
+    });
+  }
+
+  // toggle element functions
+  createMissionToggle(bool: boolean): void {
+    this.createMissionForm = bool;
+    this.showMissionDetails = false;
+    this.main = !bool;
+    this.mission = {
+      name: '',
+      date: new Date(),
+      planetId: 0,
+      description: '',
+    };
+  }
+  updateMissionToggle(bool: boolean): void {
+    this.updateMissionForm = bool;
+    this.createMissionForm = false;
+    this.showMissionDetails = false;
+    this.main = !bool;
+  }
+
+  selectMission(id: number): void {
+    this.MissionService.getMission(id).subscribe((mission: MissionFormDto) => {
+      this.mission = mission;
+      console.log('mission', this.mission, id);
+      this.planetsService.getPlanet(mission.planetId).subscribe((planet) => {
+        this.planet = planet;
+        this.getDiscoveriesForMission(id);
+      });
+      this.showMissionDetails = true;
     });
   }
 }

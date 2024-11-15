@@ -5,6 +5,8 @@ import { DiscoveryFormDto } from '../interfaces/DiscoveryFormDto_model';
 import { requestResult } from '../interfaces/RequestResult_model';
 import { DiscoveryTypeDto } from '../interfaces/DiscoveryTypeDto_model';
 import { DiscoveryDropDownDto } from '../interfaces/DiscoveryDropDownDto_model';
+import { DiscoveryResponse } from '../interfaces/DiscoveryResponseDto_model';
+import { response } from 'express';
 
 @Injectable({
   providedIn: 'root',
@@ -50,19 +52,26 @@ export class DiscoveryService {
 
   getDiscoveries(): Observable<DiscoveryFormDto[]> {
     return this.httpclient
-      .get<DiscoveryFormDto[]>('http://localhost:5125/api/Discovery')
-      .pipe(catchError(this.handleError));
+      .get<requestResult<DiscoveryFormDto[]>>(
+        'http://localhost:5125/api/Discovery'
+      )
+      .pipe(
+        map((response) => ({
+          data: response.data,
+        })),
+        catchError(this.handleError)
+      );
   }
-  getDiscoveriesForMission(missionId: number): Observable<DiscoveryFormDto[]> {
+  getDiscoveriesForMission(missionId: number): Observable<DiscoveryResponse> {
     return this.httpclient
       .get<requestResult<DiscoveryFormDto[]>>(
         `http://localhost:5125/api/Mission/${missionId}/discovery`
       )
       .pipe(
-        map((response) => {
-          console.log('Discoveries for mission: ', response.data);
-          return response.data;
-        }),
+        map((response) => ({
+          data: response.data,
+          message: response.message,
+        })),
         catchError(this.handleError)
       );
   }

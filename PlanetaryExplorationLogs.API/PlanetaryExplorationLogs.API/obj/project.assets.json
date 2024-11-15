@@ -2799,19 +2799,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carlt\\.nuget\\packages\\": {}
+    "C:\\Users\\Rotor\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+      "projectUniqueName": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
       "projectName": "PlanetaryExplorationLogs.API",
-      "projectPath": "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
-      "packagesPath": "C:\\Users\\carlt\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\obj\\",
+      "projectPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API.csproj",
+      "packagesPath": "C:\\Users\\Rotor\\.nuget\\packages\\",
+      "outputPath": "E:\\github\\Test repo\\TestRepo\\PlanetaryExplorationLogs.API\\PlanetaryExplorationLogs.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\carlt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rotor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2835,8 +2840,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2880,7 +2886,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
